@@ -1,0 +1,21 @@
+body {
+  font-family: sans-serif;
+}
+/* make content fill the enitre window*/
+hmtl,
+.fullscreen {
+  display: flex;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* center content in browser window */
+.container {
+  margin: auto;
+  text-line: center;
+}
+
+.title {
+  font-size: 3rem;
