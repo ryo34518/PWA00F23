@@ -24,5 +24,16 @@ self.addEventListener('install',function(event) {
   })
 );
 });
-    
-  
+
+self.addEventListener('activate', event => {
+  console.log('service worker activating . . . ');
+});
+
+//the fetch handler serves responses for same-origin resources from a cache
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.match(event.request).then(function(response) {
+      return response || fetch(event.request);
+    })
+    );
+});
